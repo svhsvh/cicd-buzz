@@ -8,11 +8,13 @@ adverbs = ('remarkably', 'enormously', 'substantially', 'significantly',
     'seriously')
 verbs = ('accelerates', 'improves', 'enhances', 'revamps', 'boosts')
 
+
 def sample(l, n = 1):
     result = random.sample(l, n)
     if n == 1:
         return result[0]
     return result
+
 
 def generate_buzz():
     buzz_terms = sample(buzz, 2)
@@ -20,6 +22,6 @@ def generate_buzz():
         sample(verbs), buzz_terms[1]])
     return "Brent en Sten: " + phrase.title()
 
+
 if __name__ == "__main__":
     print(generate_buzz())
-
